@@ -2,7 +2,7 @@ import React from 'react';
 import Signup from './Signup';
 import Login from './Login';
 
-export default function LoginPage(props) {
+function LoginPage(props) {
   return (
     <>
       <Signup liftToken={props.liftToken} />
@@ -10,3 +10,4 @@ export default function LoginPage(props) {
     </>
   )
 }
+export default LoginPage
