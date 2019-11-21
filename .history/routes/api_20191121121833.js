@@ -6,7 +6,7 @@ const axios = require('axios')
 // HOUSES
 
 router.get('/houses', (req, res) => {
-    axios.get(`https://www.potterapi.com/v1/characters/?key=${process.env.API_KEY}`).then(response => {
+    axios.get(`https://www.potterapi.com/v1/houses/?key=${process.env.API_KEY}`).then(response => {
         console.log('====================in the get route=======================')
         res.json(response.data)
     }).catch(err => {
@@ -37,9 +37,8 @@ router.get('/foods', (req, res) => {
     })
 })
 
-// WANDS
 router.get('/wands', (req, res) => {
-    axios.get(`https://www.potterapi.com/v1/characters/?key=${process.env.API_KEY}`).then(response => {
+    axios.get(`https://www.potterapi.com/v1/houses/?key=${process.env.API_KEY}`).then(response => {
         console.log('====================in the get route=======================')
         res.json(response.data)
     }).catch(err => {
