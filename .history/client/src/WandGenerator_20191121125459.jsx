@@ -15,8 +15,8 @@ function WandGenerator () {
     }, [])
 
     function handleClick (event) {
-        setSingleChar(event.target.toString())
-        console.log(event.charId)
+        setSingleChar(event.target)
+        console.log(event.target)
         setpersonPicked(true)
         
     }
@@ -25,7 +25,7 @@ function WandGenerator () {
     if (personPicked) {
         hogwartsCharacters = singleChar
     } else {
-        hogwartsCharacters = character.map((ele, id) => <button key={id} name={ele._id} onClick={handleClick}>{ele.name}</button>)
+        hogwartsCharacters = character.map((ele, id) => <button key={id} onClick={handleClick}>{ele.name}</button>)
     }
     return (
         <>

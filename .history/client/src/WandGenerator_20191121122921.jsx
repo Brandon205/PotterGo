@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 
-function HogwartsExpress () {
+function WandGenerator () {
 
     const [houses, setHouses] = useState([])
 
     useEffect(() => {
-        axios.get('/api').then(response => {
+        axios.get('/api/wands').then(response => {
             setHouses(response.data)
         }) 
     }, [])
@@ -15,10 +15,11 @@ function HogwartsExpress () {
 
     return (
         <>
-            <h1>Hogwarts Express</h1>
+            <h1>Welcome to Ollivanders!</h1>
+            <h3>The way to start your magical journey with a wand is to name your favorite harry potter character!</h3>
             {hogwartsHouses}
         </>
     )
 }
 
-export default HogwartsExpress
+export default WandGenerator

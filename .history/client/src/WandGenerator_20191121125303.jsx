@@ -5,7 +5,7 @@ function WandGenerator () {
 
     const [character, setCharacters] = useState([])
     const [singleChar, setSingleChar] = useState('')
-    const [personPicked, setpersonPicked] = useState(false)
+    const [personPicked, setpersonPicked] = useState(flase)
 
     useEffect(() => {
         axios.get('/api/wands').then(response => {
@@ -15,17 +15,16 @@ function WandGenerator () {
     }, [])
 
     function handleClick (event) {
+        setpersonPicked('true')
+        console.log(event.target)
         setSingleChar(event.target.toString())
-        console.log(event.charId)
-        setpersonPicked(true)
-        
     }
 
     var hogwartsCharacters;
     if (personPicked) {
-        hogwartsCharacters = singleChar
+        hogwartsCharacters = 'wand'
     } else {
-        hogwartsCharacters = character.map((ele, id) => <button key={id} name={ele._id} onClick={handleClick}>{ele.name}</button>)
+        hogwartsCharacters = character.map((ele, id) => <button key={id} onClick={handleClick}>{ele.name}</button>)
     }
     return (
         <>

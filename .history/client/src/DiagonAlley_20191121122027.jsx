@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 
-function HogwartsExpress () {
+function DiagonAlley () {
 
     const [houses, setHouses] = useState([])
 
     useEffect(() => {
-        axios.get('/api').then(response => {
+        axios.get('/api/houses').then(response => {
+            console.log(response.data)
             setHouses(response.data)
         }) 
     }, [])
@@ -15,10 +16,10 @@ function HogwartsExpress () {
 
     return (
         <>
-            <h1>Hogwarts Express</h1>
+            <h1>Api Page</h1>
             {hogwartsHouses}
         </>
     )
 }
 
-export default HogwartsExpress
+export default DiagonAlley

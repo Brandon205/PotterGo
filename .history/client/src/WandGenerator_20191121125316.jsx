@@ -15,17 +15,16 @@ function WandGenerator () {
     }, [])
 
     function handleClick (event) {
-        setSingleChar(event.target.toString())
-        console.log(event.charId)
         setpersonPicked(true)
-        
+        console.log(event.target)
+        setSingleChar(event.target.toString())
     }
 
     var hogwartsCharacters;
     if (personPicked) {
-        hogwartsCharacters = singleChar
+        hogwartsCharacters = 'wand'
     } else {
-        hogwartsCharacters = character.map((ele, id) => <button key={id} name={ele._id} onClick={handleClick}>{ele.name}</button>)
+        hogwartsCharacters = character.map((ele, id) => <button key={id} onClick={handleClick}>{ele.name}</button>)
     }
     return (
         <>

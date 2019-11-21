@@ -10,7 +10,6 @@ import {
 } from 'react-router-dom';
 import DiagonAlley from './DiagonAlley';
 import Homepage from './Homepage';
-import WandGenerator from './WandGenerator';
 
 class App extends React.Component {
   state = { 
@@ -98,7 +97,7 @@ class App extends React.Component {
             <Link to='/map'>Map</Link>
             <Route exact path='/map' component={Homepage}/>
             <Route exact path='/houses' component={DiagonAlley}/>
-            <Route exact path='/wand' component={WandGenerator}/>
+            <Route exact path='/wand' component={DiagonAlley}/>
             {contents}
           </div>
         </div>
