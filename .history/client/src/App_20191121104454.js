@@ -3,12 +3,7 @@ import Signup from './Signup';
 import Login from './Login';
 import './App.css';
 import Axios from 'axios';
-import {
-  BrowserRouter as Router,
-  Route,
-  Link
-} from 'react-router-dom';
-import ApiPage from './ApiPage';
+import 
 
 class App extends React.Component {
   state = { 
@@ -86,18 +81,14 @@ class App extends React.Component {
     }
 
     return ( 
-      <Router>
-        <div className="App">
-          <header>
-            <h1>Welcome to my site!</h1>
-          </header>
-          <div className="content-box">
-            <Link to='/houses'>Houses</Link>
-            <Route exact path='/houses' component={ApiPage}/>
-            {contents}
-          </div>
+      <div className="App">
+        <header>
+          <h1>Welcome to my site!</h1>
+        </header>
+        <div className="content-box">
+          {contents}
         </div>
-      </Router>  
+      </div>
     );
   }
 }

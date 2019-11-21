@@ -8,7 +8,6 @@ import {
   Route,
   Link
 } from 'react-router-dom';
-import ApiPage from './ApiPage';
 
 class App extends React.Component {
   state = { 
@@ -93,7 +92,6 @@ class App extends React.Component {
           </header>
           <div className="content-box">
             <Link to='/houses'>Houses</Link>
-            <Route exact path='/houses' component={ApiPage}/>
             {contents}
           </div>
         </div>
