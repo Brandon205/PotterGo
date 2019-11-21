@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 
-function DiagonAlley () {
+function Pub () {
 
     const [houses, setHouses] = useState([])
 
     useEffect(() => {
         axios.get('/api').then(response => {
+            console.log(response.data)
             setHouses(response.data)
         }) 
     }, [])
@@ -21,4 +22,4 @@ function DiagonAlley () {
     )
 }
 
-export default DiagonAlley
+export default Pub
