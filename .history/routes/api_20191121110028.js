@@ -6,15 +6,12 @@ const axios = require('axios')
 router.get('/', (req, res) => {
     var config = {
         headers: {
-            Authorization: process.env.API_KEY
+            key: process.env.API_KEY
         }
     }
-    axios.put('https://www.potterapi.com/v1/houses', config).then(response => {
+    axios.get('https://www.potterapi.com/v1/house', config).then(response => {
         console.log('====================in the get route=======================')
         res.json(response.data)
-    }).catch(err => {
-        console.log(`================================================================================
-        ================================${err}`)
     })
 })
 
