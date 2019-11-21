@@ -96,7 +96,7 @@ class App extends React.Component {
             <Link to='/houses'>Houses</Link>
             <Link to='/map'>Map</Link>
             <Route exact path='/map' component={Homepage}/>
-            <Route exact path='/houses' component={DiagonAlley}/>
+            <Route exact path='/houses' component={ApiPage}/>
             {contents}
           </div>
         </div>
