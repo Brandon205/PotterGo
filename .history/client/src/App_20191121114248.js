@@ -9,7 +9,6 @@ import {
   Link
 } from 'react-router-dom';
 import ApiPage from './ApiPage';
-import Homepage from './Homepage';
 
 class App extends React.Component {
   state = { 
@@ -95,7 +94,8 @@ class App extends React.Component {
           <div className="content-box">
             <Link to='/houses'>Houses</Link>
             <Link to='/map'>Map</Link>
-            <Route exact path='/map' component={Homepage}/>
+            <Route exact path=‘/map’ component={Homepage}/>
+
             <Route exact path='/houses' component={ApiPage}/>
             {contents}
           </div>

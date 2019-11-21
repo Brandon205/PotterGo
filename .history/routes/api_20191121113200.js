@@ -4,7 +4,12 @@ const router = express.Router();
 const axios = require('axios')
 
 router.get('/', (req, res) => {
-    axios.get(`https://www.potterapi.com/v1/houses/?key=${process.env.API_KEY}`).then(response => {
+    var config = {
+        headers: {
+            key: process.env.API_KEY
+        }
+    }
+    axios.put(config, 'https://www.potterapi.com/v1/houses').then(response => {
         console.log('====================in the get route=======================')
         res.json(response.data)
     }).catch(err => {

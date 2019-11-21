@@ -10,9 +10,9 @@ function ApiPage () {
             console.log(response.data)
             setHouses(response.data)
         }) 
-    }, [])
+    })
 
-    const hogwartsHouses = houses.map((ele, id) => <p key={id}>{ele.name}</p>)
+    const hogwartsHouses = houses.map((ele, id) => <p key={id}>{ele}</p>)
 
     return (
         <>
