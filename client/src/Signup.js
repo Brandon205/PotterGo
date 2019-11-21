@@ -31,6 +31,7 @@ class Signup extends React.Component {
   render() { 
     return ( 
       <div className="App">
+        <h2>Signup:</h2>
         <form onSubmit={this.handleSubmit}>
           <input type="text" name="name" onChange={this.handleChange} value={this.state.name} placeholder="Name" /><br/>
           <input type="text" name="email" onChange={this.handleChange} value={this.state.email} placeholder="Email" /><br/>

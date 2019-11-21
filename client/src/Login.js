@@ -28,7 +28,7 @@ class Login extends React.Component {
   render() { 
     return ( 
       <div className="App">
-        <h2>Log In Here: </h2>
+        <h2>Login:</h2>
         <form onSubmit={this.handleSubmit}>
           <input type="text" name="email" onChange={this.handleChange} value={this.state.email} placeholder="Email" />
           <input type="password" name="password" onChange={this.handleChange} value={this.state.password} placeholder="Password" />
