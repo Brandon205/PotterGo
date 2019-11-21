@@ -64,6 +64,7 @@ class App extends React.Component {
           <Route exact path='/' render={ () => <LoginPage liftToken={this.liftToken}/>}/>
           <Route exact path='/map' component={Homepage}/>
           <Route exact path='/houses' component={DiagonAlley}/>
+          <button onClick={this.logout}>Logout</button>
         </div>
       </Router>  
     );
