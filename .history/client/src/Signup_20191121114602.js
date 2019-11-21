@@ -34,8 +34,8 @@ class Signup extends React.Component {
         <form onSubmit={this.handleSubmit}>
           <input type="text" name="name" onChange={this.handleChange} value={this.state.name} placeholder="Name" /><br/>
           <input type="text" name="email" onChange={this.handleChange} value={this.state.email} placeholder="Email" /><br/>
-          <input type="text" name="house" onChange={this.handleChange} value={this.state.house} placeholder="Gryffindor" /><br/>
-          <input type="password" name="password" onChange={this.handleChange} value={this.state.password} placeholder="Password" /><br/>
+          <input type="text" name="house" onChange={this.handleChange} value={this.state.house} placeholder="Email" /><br/>
+          <input type="password" name="password" onChange={this.handleChange} value={this.state.password} placeholder="Password" />
           <input type="submit" value="Sign Up"/>
         </form>
       </div>
