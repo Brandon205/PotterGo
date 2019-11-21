@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 
-function DiagonAlley () {
+function WandGenerator () {
 
     const [houses, setHouses] = useState([])
 
@@ -21,4 +21,4 @@ function DiagonAlley () {
     )
 }
 
-export default DiagonAlley
+export default WandGenerator
