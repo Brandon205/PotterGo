@@ -25,7 +25,7 @@ function WandGenerator () {
 
     var hogwartsCharacters;
     if (personPicked) {
-        if (typeof singleChar !== 'undefined') {
+        if (singleChar !== undefined) {
             hogwartsCharacters = 'Your wand is: ' + singleChar
         } else {
             hogwartsCharacters = 'Your wand is: Elder, 15", Thestral tail hair core'

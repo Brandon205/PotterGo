@@ -66,7 +66,6 @@ class App extends React.Component {
           <Route exact path='/map' component={Homepage}/>
           <Route exact path='/houses' component={DiagonAlley}/>
           <Route exact path='/wand' component={WandGenerator}/>
-          <button onClick={this.logout}>Logout</button>
         </div>
       </Router>  
     );

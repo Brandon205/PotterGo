@@ -15,7 +15,7 @@ function WandGenerator () {
     }, [])
 
     function handleClick (event, wand) {
-        setSingleChar(wand)
+        setSingleChar(event.target.toString())
         // let myString = event.target.toString()
         // let myEditedString = myString.match(/"\w*[^"]/)
         console.log(wand)
@@ -25,11 +25,7 @@ function WandGenerator () {
 
     var hogwartsCharacters;
     if (personPicked) {
-        if (typeof singleChar !== 'undefined') {
-            hogwartsCharacters = 'Your wand is: ' + singleChar
-        } else {
-            hogwartsCharacters = 'Your wand is: Elder, 15", Thestral tail hair core'
-        }
+        hogwartsCharacters = singleChar
     } else {
         hogwartsCharacters = character.map((ele, id) => <button key={id} onClick={(event) => handleClick(event, ele.wand)}>{ele.name}</button>)
     }
