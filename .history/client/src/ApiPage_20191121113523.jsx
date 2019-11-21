@@ -7,12 +7,12 @@ function ApiPage () {
 
     useEffect(() => {
         axios.get('/api').then(response => {
-            console.log(response.data)
-            setHouses(response.data)
+            console.log(response)
+            setHouses(response)
         }) 
-    }, [])
+    })
 
-    const hogwartsHouses = houses.map((ele, id) => <p key={id}>{ele.name}</p>)
+    const hogwartsHouses = houses.map((ele, id) => <p key={id}>{ele}</p>)
 
     return (
         <>

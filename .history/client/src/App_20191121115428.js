@@ -9,7 +9,7 @@ import {
   Link
 } from 'react-router-dom';
 import ApiPage from './ApiPage';
-import Homepage from './Homepage';
+import Homepage from './Homepage'
 
 class App extends React.Component {
   state = { 

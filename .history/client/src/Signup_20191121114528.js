@@ -16,7 +16,7 @@ class Signup extends React.Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    Axios.post('/auth/signup', {name: this.state.name, email: this.state.email, password: this.state.password, house: this.state.house})
+    Axios.post('/auth/signup', {name: this.state.name, email: this.state.email, password: this.state.password})
     .then(res => {
       if (res.data.type === 'error') {
         // TODO: Maybe put this message in state
@@ -34,8 +34,7 @@ class Signup extends React.Component {
         <form onSubmit={this.handleSubmit}>
           <input type="text" name="name" onChange={this.handleChange} value={this.state.name} placeholder="Name" /><br/>
           <input type="text" name="email" onChange={this.handleChange} value={this.state.email} placeholder="Email" /><br/>
-          <input type="text" name="house" onChange={this.handleChange} value={this.state.house} placeholder="Gryffindor" /><br/>
-          <input type="password" name="password" onChange={this.handleChange} value={this.state.password} placeholder="Password" /><br/>
+          <input type="password" name="password" onChange={this.handleChange} value={this.state.password} placeholder="Password" />
           <input type="submit" value="Sign Up"/>
         </form>
       </div>
