@@ -1,22 +1,22 @@
 import React from 'react';
-import Signup from './Signup';
-import Login from './Login';
 import './App.css';
 import Axios from 'axios';
 import {
   BrowserRouter as Router,
   Route,
-  Link
+  Link,
 } from 'react-router-dom';
 import DiagonAlley from './DiagonAlley';
 import Homepage from './Homepage';
+import LoginPage from './LoginPage';
 
 class App extends React.Component {
   state = { 
     token: '',
     user: null,
     errorMessage: '',
-    lockedResult: ''
+    lockedResult: '',
+    redirect: ''
   }
 
   checkForLocalToken = () => {
@@ -36,7 +36,7 @@ class App extends React.Component {
         } else {
           // if verified store it back in LS and state
           localStorage.setItem('mernToken', res.data.token);
-          this.setState({ token: res.data.token });
+          this.setState({ token: res.data.token, user: res.data.user });
         }
       })
     }
@@ -55,50 +55,15 @@ class App extends React.Component {
     this.setState({ token: '', user: null });
   }
 
-  handleClick = () => {
-    let config = {
-      headers: {
-        Authorization: `Bearer ${this.state.token}`
-      }
-    }
-    Axios.get('/locked/test', config).then(res => {
-      this.setState({ lockedResult: res.data });
-    });
-  };
-
   render() { 
-    let contents;
-    if (this.state.user) {
-      contents = (
-        <>
-          <p>Hello, {this.state.user.name} </p>
-          <button onClick={this.handleClick}>Test protected route</button>
-          <button onClick={this.logout}>Logout</button>
-          <p>{this.state.lockedResult}</p>
-        </>
-      )
-    } else {
-      contents = (
-        <>
-          <Signup liftToken={this.liftToken} />
-          <Login liftToken={this.liftToken} />
-        </>
-      )
-    }
-
     return ( 
       <Router>
         <div className="App">
-          <header>
-            <h1>Welcome to my site!</h1>
-          </header>
-          <div className="content-box">
-            <Link to='/houses'>Houses</Link>
-            <Link to='/map'>Map</Link>
-            <Route exact path='/map' component={Homepage}/>
-            <Route exact path='/houses' component={DiagonAlley}/>
-            {contents}
-          </div>
+          <Link to='/houses'>Houses</Link>
+          <Link to='/map'>Map</Link>
+          <Route exact path='/' render={ () => <LoginPage liftToken={this.liftToken}/>}/>
+          <Route exact path='/map' component={Homepage}/>
+          <Route exact path='/houses' component={DiagonAlley}/>
         </div>
       </Router>  
     );
