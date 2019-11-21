@@ -5,7 +5,7 @@ import Login from './Login';
 function LoginPage(props) {
   return (
     <>
-      <Signup liftToken={props.liftToken} />
+      <Signup liftToken={() => props.liftToken} />
       <Login liftToken={props.liftToken} />
     </>
   )
