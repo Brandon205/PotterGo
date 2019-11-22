@@ -175,7 +175,7 @@ form {
   width: 50vw;
   height: 50vh;
   display: flex;
-  align-items: center;
+  align-item: center;
   justify-content: center;
 }
 
