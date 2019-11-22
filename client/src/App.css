@@ -1,20 +1,43 @@
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 45px;
+  position: fixed;
+  bottom: 0px;
+  width: 100vw;
+  border: 1px solid black;
+  background-color: gray;
+}
+
+header {
+  background-color: gray;
+  border-bottom: 2px solid black;
+  top: 0px;
+  margin: 0;
+  font-size: 20px;
+}
+
+header h1 {
+  margin: 0 0 10px 0;
+}
+
+/* img {
+  width: 500px;
+  height: 400px;
+} */
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
+.link {
+  font-size: 30px;
+  text-decoration: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.material-icons {
+  font-size: 40px;
 }
 
 .App-link {
