@@ -50,7 +50,7 @@ class Signup extends React.Component {
           <input className="text-input" type="password" name="password" onChange={this.handleChange} value={this.state.password} placeholder="Password" /><br/>
           <button className="submit">Let's go</button>
         </form>
-        <Login />
+        <Login liftToken={this.props.liftToken}/>
         {redirect}
       </div>
     );
