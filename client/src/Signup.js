@@ -1,5 +1,6 @@
 import React from 'react';
 import Axios from 'axios';
+import { Redirect } from 'react-router-dom';
 
 class Signup extends React.Component {
   state = { 
@@ -7,7 +8,8 @@ class Signup extends React.Component {
     email: '',
     password: '',
     message: '', 
-    house: ''
+    house: '',
+    redirect: ''
   }
 
   handleChange = (e) => {
@@ -26,9 +28,17 @@ class Signup extends React.Component {
         this.props.liftToken(res.data)
       }
     }).catch(err => console.log(err));
+    this.setState({ redirect: <Redirect to="/map" /> });
   }
 
   render() { 
+    let redirect;
+    if (this.state.redirect) {
+      redirect = this.state.redirect
+    } else {
+      redirect = ''
+    }
+
     return ( 
       <div className="App">
         <h2>Signup:</h2>
@@ -39,6 +49,7 @@ class Signup extends React.Component {
           <input type="password" name="password" onChange={this.handleChange} value={this.state.password} placeholder="Password" /><br/>
           <input type="submit" value="Sign Up"/>
         </form>
+        {redirect}
       </div>
     );
   }
