@@ -12,6 +12,7 @@ import LoginPage from './LoginPage';
 import WandGenerator from './WandGenerator';
 import DiagonAlleyInt from './DiagonAlleyInt';
 import WandGeneratorInt from './WandGeneratorInt';
+import Trolley from './Trolley';
 
 class App extends React.Component {
   state = { 
@@ -75,11 +76,7 @@ class App extends React.Component {
           <Route exact path='/diagonalley' render={() => <DiagonAlley user={this.state.user} /> } />
           <Route exact path='/wand' component={WandGeneratorInt}/>
           <Route exact path='/ollivanders' render={() => <WandGenerator user={this.state.user} /> } />
-          <nav>
-            <Link className="link" to="/map"><i className="material-icons">home</i></Link>
-            <Link className="link" to="/trolley"><i className="material-icons secondary-content">arrow_forward</i></Link>
-            <Link className="link" to="/trolley"><i className="material-icons secondary-content">arrow_forward</i></Link>
-          </nav>
+          <Route exact path='/trolley' render={ () => <Trolley user={this.state.user} /> } />
         </div>
       </Router>  
     );

@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import { Redirect } from 'react-router-dom';
-import map from './img/Map.png';
+import map from './img/MapboxMap.png';
 import tree from './img/Tree.jpg';
 import gum from './img/GumWall.jpg';
 

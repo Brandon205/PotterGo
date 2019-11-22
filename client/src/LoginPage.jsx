@@ -2,7 +2,7 @@ import React from 'react';
 import Signup from './Signup';
 import Login from './Login';
 
-function LoginPage(props) {
+export default function LoginPage(props) {
   let content;
   if (props.token) {
     content = (
@@ -26,4 +26,3 @@ function LoginPage(props) {
     </div>
   )
 }
-export default LoginPage
