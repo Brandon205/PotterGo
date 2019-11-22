@@ -1,0 +1,186 @@
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 45px;
+  /* position: fixed; */
+  top: 0px;
+  width: 100vw;
+  border: 1px solid black;
+  background-color: gray;
+}
+
+header {
+  background-color: gray;
+  border-bottom: 2px solid black;
+  margin: 0;
+  font-size: 20px;
+}
+
+header h1 {
+  margin: 0;
+  width: 100vw;
+}
+
+img {
+  width: 60vw;
+  height: 40vh;
+}
+
+form {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.text-input {
+  background-color: rgba(255, 255, 255, 0.75);
+  width: 300px;
+  padding: 8px;
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 1em;
+}
+
+.submit {
+  width: 100px;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 2px solid black;
+  background-color: transparent;
+  font-size: 16px;
+}
+
+.submit:hover {
+  background-color: rgb(211, 80, 56);
+}
+
+.dog-counter {
+  border-radius: 50%;
+  font-size: 30px;
+  position: absolute;
+}
+
+.absoluteTree {
+  position: absolute;
+  top: 3vh;
+  left: 32vw;
+  width: 35px;
+  height: 35px;
+}
+
+.absoluteGum {
+  position: absolute;
+  top: 24vh;
+  left: 37vw;
+  width: 35px;
+  height: 35px;
+}
+
+.absoluteGum:hover, .absoluteTree:hover {
+  cursor: pointer;
+}
+
+.image {
+  position: relative;
+  margin-top: 25px;
+}
+
+.App {
+  text-align: center;
+}
+
+.link {
+  font-size: 30px;
+  text-decoration: none;
+}
+
+.material-icons {
+  font-size: 40px;
+}
+
+.App-link {
+  color: #09d3ac;
+}
+/* ***************************** DiagonAlleyInt *************************** */
+.DiagonAlleyIntContainer {
+  margin-top: 5%;
+}
+
+.bubbleWallImage {
+  height: 500px;
+  width: 400px;
+}
+
+/* ***************************** DiagonAlley *************************** */
+
+
+.backgroundDiv {
+  margin-top: 1%;
+  display: flex;
+  flex-flow: column;
+  height: 100vh;
+  width: 100vw;
+  background-image: url('brick.jpg');
+  background-size: cover;
+}
+
+.container {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.tryAgain {
+  margin: 2%;
+  width: 20vw;
+  height: 10vh;
+  border-radius: 20%;
+  background: black;
+  font-size: 20px;
+  color: white;
+}
+
+.diagonDiv {
+  height: 300px;
+  width: 300px;
+  border: 30px solid black;
+}
+
+.innerDiv {
+  height: 300px;
+  width: 300px;
+}
+/* ***************************** DiagonAlley *************************** */
+.containerTwo {
+  display: flex;
+  flex-flow: column;
+  height: 100vh;
+  width: 100vw;
+  background-image: url('diagonAlley.jpg');
+  background-size: cover;
+}
+
+.titleDiagon {
+  margin: 5%;
+  font-size: 2em;
+  color: white;
+}
+
+.backToChecklist {
+  text-decoration: none;
+  color: white;
+  font-size: 3em;
+  border-radius: 20%;
+}
+
+/* ***************************** wandGenerator *************************** */
+.wandGeneratorBackground {
+  height: 100vh;
+  width: 100vw;
+  background: darkblue;
+}
+
+.wandGeneratorContainer {
+  margin: 5%;
+}
+
