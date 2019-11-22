@@ -19,13 +19,10 @@ router.post('/edit/wand', (req, res) => {
 
 router.post('/edit/initial', (req, res) => {
   console.log('============================ in the update initial =======================================')
-  User.findOneAndUpdate({email: req.body.email}, {
-    wand: 'a',
-    diagon: 'a',
-    pet: 'a',
-  }, (err, user) => {
-    console.log(user.wand, user.diagon, user.pet)
-    res.json('updated')
+  User.findOneAndUpdate({email: req.body.email}, (err, user) => {
+    user.wand: 'a',
+    user.diagon: 'a',
+    user.pet: 'a',
   })
 })
 

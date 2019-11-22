@@ -24,7 +24,6 @@ router.post('/edit/initial', (req, res) => {
     diagon: 'a',
     pet: 'a',
   }, (err, user) => {
-    console.log(user.wand, user.diagon, user.pet)
     res.json('updated')
   })
 })
