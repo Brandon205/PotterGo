@@ -50,7 +50,6 @@ header h1 {
   height: 100vh;
   width: 100vw;
   background-image: url('brick.jpg');
-  background-size: cover;
 }
 
 .container {
@@ -59,13 +58,10 @@ header h1 {
   justify-content: center;
 }
 
-.containerTwo {
+.container {
   display: flex;
-  flex-flow: column;
-  height: 100vh;
-  width: 100vw;
-  background-image: url('diagonAlley.jpg');
-  background-size: cover;
+  align-content: center;
+  justify-content: center;
 }
 
 .diagonDiv {
@@ -77,18 +73,6 @@ header h1 {
 .innerDiv {
   height: 300px;
   width: 300px;
-}
-
-.titleDiagon {
-  font-size: 2em;
-  color: white;
-}
-
-.backToChecklist {
-  text-decoration: none;
-  color: white;
-  font-size: 3em;
-  border-radius: 20%;
 }
 
 .tryAgain {

@@ -16,6 +16,7 @@ function WandGenerator () {
     function handleClick (event, wand) {
         setSingleChar(wand)
         setpersonPicked(true)
+        
     }
 
     var hogwartsCharacters;

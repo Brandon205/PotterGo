@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { Redirect } from 'react-router-dom'
 
 function DiagonAlley () {
     const [X, setX] = useState(0)
@@ -15,20 +15,28 @@ function DiagonAlley () {
         setY(event.screenY)
         counter+=1
         setCount(counter)
+        console.log(counter)
     }
 
     function onMouseMoveTwo (event)  {
         setBreaking(true)
         setyouFaileda('The wall stays solid! Please try again!')
         setCount(0)
+        console.log('You have failed')
     }
     
     function onMouseDown(event) {
         setCount(5)
+        console.log(count)
+        console.log('mouse down')
     }
 
     function onClick (event) {
         setyouFaileda('click to begin')
+    }
+
+    function onClickRedirect (event) {
+        setRedirect(<Redirect to='/map' />)
     }
 
     var youFailed;
@@ -41,14 +49,16 @@ function DiagonAlley () {
         youFailedFinal = <h3>{youFailed}</h3>
     } 
     var wholePage;
-    var myText = <div><p className='backToChecklist'>Go Back To Checklist!</p></div>
-    if (count > 900) {
+    if (count > 20) {
         wholePage = (
-            <div className='containerTwo'>
-                <h1 className='titleDiagon'>YOU WIN, COME ON IN AND FIND A WAND</h1>
-                <Link to='/map'>{myText}</Link>
+            <div className='container'>
+                <h1>'YOU WIN, COME ON IN AND FIND A WAND'</h1>
+                <Link to='/map'>Go to Checklist to see Achieved Goals and Next Challenge!</button></Link>
             </div>
         )
+    } else if (redirect) {
+        console.log('redirect', redirect)
+        wholePage = {redirect}
     } else {
         wholePage = (
         <div className='backgroundDiv'>

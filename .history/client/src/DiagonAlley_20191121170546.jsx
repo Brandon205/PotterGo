@@ -41,12 +41,11 @@ function DiagonAlley () {
         youFailedFinal = <h3>{youFailed}</h3>
     } 
     var wholePage;
-    var myText = <div><p className='backToChecklist'>Go Back To Checklist!</p></div>
-    if (count > 900) {
+    if (count > 20) {
         wholePage = (
-            <div className='containerTwo'>
-                <h1 className='titleDiagon'>YOU WIN, COME ON IN AND FIND A WAND</h1>
-                <Link to='/map'>{myText}</Link>
+            <div className='container'>
+                <h1>'YOU WIN, COME ON IN AND FIND A WAND'</h1>
+                <Link to='/map'>Go to Checklist to see Achieved Goals and Next Challenge!</Link>
             </div>
         )
     } else {
