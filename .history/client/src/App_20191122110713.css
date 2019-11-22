@@ -167,6 +167,7 @@ form {
 }
 
 .tryAgain {
+  margin: 2%;
   width: 20vw;
   height: 10vh;
   border-radius: 20%;

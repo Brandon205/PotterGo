@@ -19,15 +19,15 @@ router.post('/edit/wand', (req, res) => {
 
 router.post('/edit/initial', (req, res) => {
   console.log('============================ in the update initial =======================================')
-  User.findOneAndUpdate({email: req.body.email}, {
+  User.findOne({email: req.body.email}, (err, user) => {
     wand: 'a',
     diagon: 'a',
     pet: 'a',
   }, (err, user) => {
-    console.log(user.wand, user.diagon, user.pet)
+    console.log(user.wand, user.diagon, user.pet, user.name)
     res.json('updated')
   })
-})
+})  
 
 router.post('/signup', (req, res) => {
   // See if email is already in the db
