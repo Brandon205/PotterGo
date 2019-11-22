@@ -13,6 +13,9 @@ import WandGenerator from './WandGenerator';
 import DiagonAlleyInt from './DiagonAlleyInt';
 import WandGeneratorInt from './WandGeneratorInt';
 import Trolley from './Trolley';
+import Bookstore from './Bookstore';
+import Station from './Station';
+import Pub from './Pub';
 
 class App extends React.Component {
   state = { 
