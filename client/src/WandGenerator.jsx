@@ -30,14 +30,13 @@ function WandGenerator (props) {
     var huffCharacters;
     if (personPicked) {
         if (typeof singleChar !== 'undefined') {
-            console.log(props.user._id)
             axios.post('/auth/edit/wand', {wand: 'Elder, 15", Thestral tail hair core', id: props.user._id}).then(response => {
             })
-            hogwartsCharacters = ( <div id="wand-fix">Your wand is: {singleChar}</div> )
+            hogwartsCharacters = ( <div className="black-back"><h4 id="wand-fixed">Your wand is: {singleChar}</h4></div> )
         } else {
             axios.post('/auth/edit/wand', {wand: 'Elder, 15", Thestral tail hair core', id: props.user._id}).then(response => {
             })
-            hogwartsCharacters = ( <div id="wand-fixed">Your wand is: Elder, 15", Thestral tail hair core </div>)
+            hogwartsCharacters = ( <div className="black-back"><h4 id="wand-fixed">Your wand is: Elder, 15", Thestral tail hair core</h4></div>)
         }
     } else {
         console.log(character)
@@ -73,12 +72,10 @@ function WandGenerator (props) {
     }
     return (
         <div className='wandGeneratorBackground'>
-            <div className='wandGeneratorBackground'>
-                <h1>Pick yer wand out at Ollivanders!</h1>
-                    <h4>2010 Western Ave, Seattle, WA 98121</h4>
-                <h4>The way to start your magical journey with a wand is to name your favorite harry potter character!</h4>
-                {hogwartsCharacters}
-            </div>
+            <h1>Pick yer wand out at Ollivanders!</h1>
+            <h4>2010 Western Ave, Seattle, WA 98121</h4>
+            <h4>The way to start your magical journey with a wand is to name your favorite harry potter character!</h4>
+            {hogwartsCharacters}
         </div>
     )
 }

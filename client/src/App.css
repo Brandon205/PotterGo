@@ -269,5 +269,8 @@ span {
 }
 
 #wand-fix {
-  height: 100vh;
+  /* height: 100vh; */
+  color: hotpink;
+  height: 500px;
+  width: 100vw;
 }
