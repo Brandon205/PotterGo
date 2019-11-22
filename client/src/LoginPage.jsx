@@ -20,6 +20,7 @@ export default function LoginPage(props) {
 
   return (
     <div className="black-back">
+      <h1>Welcome to PotterExplore</h1>
       {content}
     </div>
   )

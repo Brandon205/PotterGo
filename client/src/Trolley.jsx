@@ -32,10 +32,14 @@ export default function Trolley(props) {
   if (items) {
     mappedItems = (
       <>
-        <p>House: {items.house}</p>
-        <p>Diagon Alley: {diagony}</p>
-        <p>Wand: {wandy}</p>
-        <p>Pet: {pety}</p>
+        <h2>{items.house}</h2>
+        <div className="trolley-container">
+          <div className="trolley">
+            <h4><span>Diagon Alley: </span>{diagony}</h4>
+            <h4><span>Wand: </span>{wandy}</h4>
+            <h4><span>Pet: </span>{pety}</h4>
+          </div>
+        </div>
       </>
     )
   } else {
@@ -44,7 +48,7 @@ export default function Trolley(props) {
     )
   }
   return (
-    <div className="App">
+    <div className="black-back">
       <h1>Trolley Level 1</h1>
       {mappedItems}
     </div>
