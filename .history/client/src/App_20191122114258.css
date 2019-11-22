@@ -16,27 +16,25 @@ nav {
 }
 
 header {
-  background-color: #E2B822;
+  background-color: F5F2EC;
   border-bottom: 2px solid black;
   margin: 0;
   font-size: 20px;
 }
 
-h1, h2, h3 {
-  font-family: HarryPotter;
-  font-size: 3em;
+h1 {
+  font-size: 50px;
   margin-top: 0;
   padding-top: 20px;
 }
 
 header h1 {
-  padding: 0;
   margin: 0;
   width: 100vw;
 }
 
 img {
-  width: 55vw;
+  width: 60vw;
   height: 45vh;
 }
 
@@ -76,7 +74,7 @@ form {
 }
 
 .submit:hover {
-  background-color: #c8a219;
+  background-color: #064F4F;
 }
 
 .dog-counter {
@@ -131,7 +129,7 @@ form {
 
 .image {
   position: relative;
-  margin-top: 17vh;
+  margin-top: 25px;
 }
 
 .App {
@@ -152,9 +150,13 @@ form {
   color: #09d3ac;
 }
 /* ***************************** DiagonAlleyInt *************************** */
+.DiagonAlleyIntContainer {
+  margin-top: 1%;
+}
+
 .bubbleWallImage {
-  max-height: 400px;
-  max-width: 300px;
+  height: 500px;
+  width: 400px;
 }
 
 /* ***************************** DiagonAlley *************************** */
@@ -169,12 +171,10 @@ form {
 }
 
 .container {
+
   background-image: url('brick.jpg');
-  width: 50vw;
-  height: 50vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 30vw;
+  height: 40vh;
 }
 
 .metaContainer {

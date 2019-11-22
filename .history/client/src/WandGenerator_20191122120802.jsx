@@ -27,10 +27,6 @@ function WandGenerator (props) {
     var slytherins = []
     var ravenclaws = []
     var hufflepuffs = []
-    var gryfCharacters;
-    var slythCharacters;
-    var ravCharacters;
-    var huffCharacters;
     if (personPicked) {
         if (typeof singleChar !== 'undefined') {
             console.log(props.user._id)

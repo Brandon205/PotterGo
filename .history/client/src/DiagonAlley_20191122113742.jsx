@@ -61,11 +61,9 @@ function DiagonAlley (props) {
                 <h2>Start yer journey by unlocking Diagon Alley!</h2>
                 <h3>Trace the shape on the bricks to unlock Diagon Alley and get yer school supplies!</h3>
             </div>
-            <div className='metaContainer'>
-                <div className='container'>
-                    <div onMouseMove={onMouseMove} onMouseDown={onMouseDown} className='diagonDiv'>
-                    <div onMouseMove={onMouseMoveTwo} className='innerDiv'></div>
-                    </div>
+            <div className='container'>
+                <div onMouseMove={onMouseMove} onMouseDown={onMouseDown} className='diagonDiv'>
+                <div onMouseMove={onMouseMoveTwo} className='innerDiv'></div>
                 </div>
             </div>
             <div>
