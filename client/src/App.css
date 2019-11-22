@@ -4,7 +4,7 @@ nav {
   align-items: center;
   height: 45px;
   position: fixed;
-  bottom: 0px;
+  top: 0px;
   width: 100vw;
   border: 1px solid black;
   background-color: gray;
@@ -13,19 +13,46 @@ nav {
 header {
   background-color: gray;
   border-bottom: 2px solid black;
-  top: 0px;
+  margin-top: 35px;
   margin: 0;
   font-size: 20px;
 }
 
 header h1 {
-  margin: 0 0 10px 0;
+  margin: 45px 0 10px 0;
 }
 
-/* img {
-  width: 500px;
-  height: 400px;
-} */
+img {
+  width: 60vw;
+  height: 40vh;
+}
+
+.dog-counter {
+  border-radius: 50%;
+  font-size: 30px;
+  position: absolute;
+}
+
+.absoluteTree {
+  position: absolute;
+  top: 3vh;
+  left: 32vw;
+  width: 35px;
+  height: 35px;
+}
+
+.absoluteGum {
+  position: absolute;
+  top: 20vh;
+  left: 44vw;
+  width: 35px;
+  height: 35px;
+}
+
+.image {
+  position: relative;
+  margin-top: 50px;
+}
 
 .App {
   text-align: center;
