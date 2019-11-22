@@ -31,12 +31,12 @@ function WandGenerator (props) {
         hogwartsCharacters = character.map((ele, id) => <button key={id} onClick={(event) => handleClick(event, ele.wand)}>{ele.name}</button>)
     }
     return (
-        <div className='wandGeneratorBackground'>
-            <div className='wandGeneratorContainer'>
-                <h1>Welcome to Ollivanders!</h1>
-                <h3>The way to start your magical journey with a wand is to name your favorite harry potter character!</h3>
-                {hogwartsCharacters}
-            </div>
+        <div>
+        <div className='wandGeneratorContainer'>
+            <h1>Welcome to Ollivanders!</h1>
+            <h3>The way to start your magical journey with a wand is to name your favorite harry potter character!</h3>
+            {hogwartsCharacters}
+        </div>
         </div>
     )
 }

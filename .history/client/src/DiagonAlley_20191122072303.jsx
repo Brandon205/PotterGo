@@ -15,6 +15,7 @@ function DiagonAlley (props) {
         setY(event.screenY)
         counter+=1
         setCount(counter)
+        console.log(counter)
     }
 
     function onMouseMoveTwo (event)  {
@@ -43,6 +44,7 @@ function DiagonAlley (props) {
     var wholePage;
     var myText = <div><p className='backToChecklist'>Go Back To Checklist!</p></div>
     if (count > 900) {
+        console.log(props.user)
         axios.post('/auth/edit/diagon', {diagon: 'true', id: props.user._id}).then(response => {
         })
         wholePage = (

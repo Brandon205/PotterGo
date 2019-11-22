@@ -15,6 +15,7 @@ function DiagonAlley (props) {
         setY(event.screenY)
         counter+=1
         setCount(counter)
+        console.log(counter)
     }
 
     function onMouseMoveTwo (event)  {

@@ -143,13 +143,11 @@ img {
 }
 
 /* ***************************** wandGenerator *************************** */
-.wandGeneratorBackground {
-  height: 100vh;
-  width: 100vw;
-  background: darkblue;
-}
 
 .wandGeneratorContainer {
   margin: 5%;
 }
 
+.wandGeneratorBackground {
+  
+}
