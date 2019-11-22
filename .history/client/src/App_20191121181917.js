@@ -66,8 +66,7 @@ class App extends React.Component {
           <Route exact path='/map' component={Homepage}/>
           <Route exact path='/houses' component={DiagonAlleyInt}/>
           <Route exact path='/diagonalley' component={DiagonAlley}/>
-          <Route exact path='/wand' component={WandGeneratorInt}/>
-          <Route exact path='/ollivanders' component={WandGenerator}/>
+          <Route exact path='/wand' component={WandGenerator}/>
           <nav>
             <Link className="link" to="/map"><i className="material-icons">home</i></Link>
             <Link className="link" to="/trolley"><i className="material-icons secondary-content">arrow_forward</i></Link>

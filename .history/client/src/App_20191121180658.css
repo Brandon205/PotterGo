@@ -108,6 +108,15 @@ img {
   font-size: 20px;
   color: white;
 }
+/* ***************************** DiagonAlley *************************** */
+.containerTwo {
+  display: flex;
+  flex-flow: column;
+  height: 100vh;
+  width: 100vw;
+  background-image: url('diagonAlley.jpg');
+  background-size: cover;
+}
 
 .diagonDiv {
   height: 300px;
@@ -119,18 +128,8 @@ img {
   height: 300px;
   width: 300px;
 }
-/* ***************************** DiagonAlley *************************** */
-.containerTwo {
-  display: flex;
-  flex-flow: column;
-  height: 100vh;
-  width: 100vw;
-  background-image: url('diagonAlley.jpg');
-  background-size: cover;
-}
 
 .titleDiagon {
-  margin: 5%;
   font-size: 2em;
   color: white;
 }
@@ -142,8 +141,4 @@ img {
   border-radius: 20%;
 }
 
-/* ***************************** wandGenerator *************************** */
 
-.wandGeneratorContainer {
-  margin: 5%;
-}

@@ -76,15 +76,14 @@ img {
 }
 
 .bubbleWallImage {
-  height: 500px;
-  width: 400px;
+  height: 300px;
+  width: 200px;
 }
 
 /* ***************************** DiagonAlley *************************** */
 
 
 .backgroundDiv {
-  margin-top: 4%;
   display: flex;
   flex-flow: column;
   height: 100vh;
@@ -99,14 +98,13 @@ img {
   justify-content: center;
 }
 
-.tryAgain {
-  margin: 2%;
-  width: 20vw;
-  height: 10vh;
-  border-radius: 20%;
-  background: black;
-  font-size: 20px;
-  color: white;
+.containerTwo {
+  display: flex;
+  flex-flow: column;
+  height: 100vh;
+  width: 100vw;
+  background-image: url('diagonAlley.jpg');
+  background-size: cover;
 }
 
 .diagonDiv {
@@ -119,18 +117,8 @@ img {
   height: 300px;
   width: 300px;
 }
-/* ***************************** DiagonAlley *************************** */
-.containerTwo {
-  display: flex;
-  flex-flow: column;
-  height: 100vh;
-  width: 100vw;
-  background-image: url('diagonAlley.jpg');
-  background-size: cover;
-}
 
 .titleDiagon {
-  margin: 5%;
   font-size: 2em;
   color: white;
 }
@@ -142,8 +130,12 @@ img {
   border-radius: 20%;
 }
 
-/* ***************************** wandGenerator *************************** */
-
-.wandGeneratorContainer {
-  margin: 5%;
+.tryAgain {
+  margin: 2%;
+  width: 20vw;
+  height: 10vh;
+  border-radius: 20%;
+  background: black;
+  font-size: 20px;
+  color: white;
 }

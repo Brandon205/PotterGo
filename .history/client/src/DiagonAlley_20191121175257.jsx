@@ -7,6 +7,7 @@ function DiagonAlley () {
     const [breaking, setBreaking] = useState(false)
     const [youFaileda, setyouFaileda] = useState('')
     const [count, setCount] = useState(0);
+    const [redirect, setRedirect] = useState('');
 
     var counter = count;
     function onMouseMove (event)  {
@@ -14,7 +15,6 @@ function DiagonAlley () {
         setY(event.screenY)
         counter+=1
         setCount(counter)
-        console.log(counter)
     }
 
     function onMouseMoveTwo (event)  {
@@ -46,7 +46,6 @@ function DiagonAlley () {
         wholePage = (
             <div className='containerTwo'>
                 <h1 className='titleDiagon'>YOU WIN, COME ON IN AND FIND A WAND</h1>
-                <h3>The Password is: Muggles</h3>
                 <Link to='/map'>{myText}</Link>
             </div>
         )

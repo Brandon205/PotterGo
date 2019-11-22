@@ -130,7 +130,6 @@ img {
 }
 
 .titleDiagon {
-  margin: 5%;
   font-size: 2em;
   color: white;
 }
@@ -142,8 +141,4 @@ img {
   border-radius: 20%;
 }
 
-/* ***************************** wandGenerator *************************** */
 
-.wandGeneratorContainer {
-  margin: 5%;
-}
