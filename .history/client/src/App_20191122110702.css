@@ -3,6 +3,10 @@
   src: url(../../client/src/img/HARRYP__.TTF);
 }
 
+h1, h2, h3, h4 {
+  font-family: HarryPotter;
+}
+
 nav {
   display: flex;
   justify-content: space-around;
@@ -11,7 +15,7 @@ nav {
   top: 0px;
   width: 100vw;
   border: 1px solid black;
-  background-color: #E2B822;
+  background-color: F5F2EC;
   color: black;
 }
 
@@ -22,12 +26,6 @@ header {
   font-size: 20px;
 }
 
-h1 {
-  font-size: 50px;
-  margin-top: 0;
-  padding-top: 20px;
-}
-
 header h1 {
   margin: 0;
   width: 100vw;
@@ -35,7 +33,7 @@ header h1 {
 
 img {
   width: 60vw;
-  height: 45vh;
+  height: 40vh;
 }
 
 form {
@@ -43,15 +41,7 @@ form {
   text-align: center;
 }
 
-.black-back {
-  background-color: black;
-  color: white;
-  width: 100vw;
-  height: 100vh;
-}
-
 .text-input {
-  font-family: HarryPotter;
   background-color: rgba(255, 255, 255, 0.75);
   width: 300px;
   padding: 8px;
@@ -62,13 +52,12 @@ form {
 }
 
 .submit {
-  font-family: HarryPotter;
   width: 100px;
   padding: 10px;
   margin-bottom: 10px;
   border: none;
-  background-color: #E2B822;
-  font-size: 20px;
+  background-color: #008788;
+  font-size: 16px;
   color: white;
   border-radius: 5px;
 }
@@ -139,7 +128,6 @@ form {
 .link {
   font-size: 30px;
   text-decoration: none;
-  color: black;
 }
 
 .material-icons {
@@ -179,6 +167,7 @@ form {
 }
 
 .tryAgain {
+  margin: 2%;
   width: 20vw;
   height: 10vh;
   border-radius: 20%;
@@ -188,7 +177,7 @@ form {
 }
 
 .youFailedText {
-  font-size: 3m;
+  
 }
 
 .diagonDiv {

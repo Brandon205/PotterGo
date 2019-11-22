@@ -35,10 +35,10 @@ function DiagonAlley (props) {
     var youFailedFinal;
     if (breaking) {
         youFailed = youFaileda
-        youFailedFinal = <h1>{youFailed}</h1>
+        youFailedFinal = <h3>{youFailed}</h3>
     } else {
         youFailed = 'click to begin'
-        youFailedFinal = <h1>{youFailed}</h1>
+        youFailedFinal = <h3 >{youFailed}</h3>
     } 
     var wholePage;
     var myText = <div><p className='backToChecklist'>Go Back To Checklist!</p></div>
@@ -57,9 +57,9 @@ function DiagonAlley (props) {
         <div className='backgroundDiv'>
             <div>
                 <h1>Welcome to Diagona Alley</h1>
-                <h1>t1428 Post Alley, Seattle, WA 98101 </h1>
-                <h1>Start yer journey by unlocking Diagon Alley!</h1>
-                <h3>Trace the shape on the bricks to unlock Diagon Alley and get yer school supplies!</h3>
+                <h2>t1428 Post Alley, Seattle, WA 98101 </h2>
+                <h3>Start yer journey by unlocking Diagon Alley!</h3>
+                <p>Trace the shape on the bricks to unlock Diagon Alley and get yer school supplies!</p>
             </div>
             <div className='container'>
                 <div onMouseMove={onMouseMove} onMouseDown={onMouseDown} className='diagonDiv'>

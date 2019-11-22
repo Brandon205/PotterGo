@@ -40,7 +40,7 @@ function DiagonAlleyInt() {
 
     return (
         <div className='DiagonAlleyIntContainer'>
-            <h1>You are about to enter Ollivanders!</h1>
+            <h1>Welcome to Ollivanders!</h1>
             <img src={tree} alt="" className='bubbleWallImage'/>
             <h3>Please navigate through to the next page when you dare!</h3>
             {conditionalizeThatShit}
