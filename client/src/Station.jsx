@@ -5,8 +5,8 @@ function Station (props) {
     return (
         <div className='DiagonAlleyIntContainer black-back'>
             <h1>HOGWARTS EXPRESS</h1>
-            <h2>140 Broadway E, Seattle, WA 98102 </h2>
-            <h3>Don’t miss yer train to Hogwarts!</h3>
+            <h4>140 Broadway E, Seattle, WA 98102 </h4>
+            <h4>Don’t miss yer train to Hogwarts!</h4>
             <img src={station} alt="" className='bubbleWallImage'/>
         </div>
     )

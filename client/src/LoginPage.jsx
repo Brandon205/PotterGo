@@ -7,7 +7,7 @@ export default function LoginPage(props) {
     content = (
       <div className="App">
         <h1>Profile</h1>
-        <button onClick={props.logout}>Logout</button>
+        <button className="submit" onClick={props.logout}>Logout</button>
       </div>
     )
   } else {
@@ -19,7 +19,7 @@ export default function LoginPage(props) {
   }
 
   return (
-    <div className="App">
+    <div className="black-back">
       {content}
     </div>
   )

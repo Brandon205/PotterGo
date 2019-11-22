@@ -13,7 +13,7 @@ export default function Homepage(props) {
   const [dogCount, setDogCount] = useState(0)
 
   return (
-    <div>
+    <div className="black-back">
       <header>
         <h1>Level 1</h1>
       </header>
