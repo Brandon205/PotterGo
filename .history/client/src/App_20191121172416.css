@@ -4,7 +4,7 @@ nav {
   align-items: center;
   height: 45px;
   position: fixed;
-  top: 0px;
+  bottom: 0px;
   width: 100vw;
   border: 1px solid black;
   background-color: gray;
@@ -13,46 +13,19 @@ nav {
 header {
   background-color: gray;
   border-bottom: 2px solid black;
-  margin-top: 35px;
+  top: 0px;
   margin: 0;
   font-size: 20px;
 }
 
 header h1 {
-  margin: 45px 0 10px 0;
+  margin: 0 0 10px 0;
 }
 
-img {
-  width: 60vw;
-  height: 40vh;
-}
-
-.dog-counter {
-  border-radius: 50%;
-  font-size: 30px;
-  position: absolute;
-}
-
-.absoluteTree {
-  position: absolute;
-  top: 3vh;
-  left: 32vw;
-  width: 35px;
-  height: 35px;
-}
-
-.absoluteGum {
-  position: absolute;
-  top: 20vh;
-  left: 44vw;
-  width: 35px;
-  height: 35px;
-}
-
-.image {
-  position: relative;
-  margin-top: 50px;
-}
+/* img {
+  width: 500px;
+  height: 400px;
+} */
 
 .App {
   text-align: center;
@@ -77,7 +50,6 @@ img {
   height: 100vh;
   width: 100vw;
   background-image: url('brick.jpg');
-  background-size: cover;
 }
 
 .container {
@@ -91,7 +63,7 @@ img {
   flex-flow: column;
   height: 100vh;
   width: 100vw;
-  background-image: url('diagonAlley.jpg');
+  background-image: url('diagon.jpg');
   background-size: cover;
 }
 
@@ -107,14 +79,17 @@ img {
 }
 
 .titleDiagon {
-  font-size: 2em;
-  color: white;
+  font-size: 3em;
+  background: grey;
 }
 
 .backToChecklist {
   text-decoration: none;
   color: white;
   font-size: 3em;
+  background: grey;
+  width: 30vw;
+  height: 20vh;
   border-radius: 20%;
 }
 

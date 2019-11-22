@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import axios from 'axios'
 
 function DiagonAlley () {
     const [X, setX] = useState(0)
@@ -7,7 +7,6 @@ function DiagonAlley () {
     const [breaking, setBreaking] = useState(false)
     const [youFaileda, setyouFaileda] = useState('')
     const [count, setCount] = useState(0);
-    const [redirect, setRedirect] = useState('');
 
     var counter = count;
     function onMouseMove (event)  {
@@ -15,16 +14,20 @@ function DiagonAlley () {
         setY(event.screenY)
         counter+=1
         setCount(counter)
+        console.log(counter)
     }
 
     function onMouseMoveTwo (event)  {
         setBreaking(true)
         setyouFaileda('The wall stays solid! Please try again!')
         setCount(0)
+        console.log('You have failed')
     }
     
     function onMouseDown(event) {
         setCount(5)
+        console.log(count)
+        console.log('mouse down')
     }
 
     function onClick (event) {
@@ -41,12 +44,10 @@ function DiagonAlley () {
         youFailedFinal = <h3>{youFailed}</h3>
     } 
     var wholePage;
-    var myText = <div><p className='backToChecklist'>Go Back To Checklist!</p></div>
-    if (count > 900) {
+    if (count > 1000) {
         wholePage = (
-            <div className='containerTwo'>
-                <h1 className='titleDiagon'>YOU WIN, COME ON IN AND FIND A WAND</h1>
-                <Link to='/map'>{myText}</Link>
+            <div className='container'>
+                <h1>'YOU WIN, COME ON IN AND FIND A WAND'</h1>
             </div>
         )
     } else {
