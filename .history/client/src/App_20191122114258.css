@@ -171,12 +171,10 @@ form {
 }
 
 .container {
+
   background-image: url('brick.jpg');
-  width: 50vw;
-  height: 50vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 30vw;
+  height: 40vh;
 }
 
 .metaContainer {

@@ -7,7 +7,7 @@ function WandGenerator (props) {
     const [gryffindor, setGryffindor] = useState([])
     const [slytherin, setSlytherin] = useState([])
     const [ravenclaw, setRavenclaw] = useState([])
-    const [hufflepuff, setHufflepuff] = useState([])
+    const [character, setCharacters] = useState([])
     const [singleChar, setSingleChar] = useState('')
     const [personPicked, setpersonPicked] = useState(false)
 
@@ -23,14 +23,6 @@ function WandGenerator (props) {
     }
 
     var hogwartsCharacters;
-    var gryffindors = []
-    var slytherins = []
-    var ravenclaws = []
-    var hufflepuffs = []
-    var gryfCharacters;
-    var slythCharacters;
-    var ravCharacters;
-    var huffCharacters;
     if (personPicked) {
         if (typeof singleChar !== 'undefined') {
             console.log(props.user._id)
@@ -44,35 +36,10 @@ function WandGenerator (props) {
         }
     } else {
         console.log(character)
-        character.forEach(person => {
-            if (person.house === 'Hufflepuff') {
-                hufflepuffs.push(person)
-            } else if (person.house === 'Gryffindor') {
-                gryffindors.push(person)
-            } else if (person.house === 'Slytherin') {
-                slytherins.push(person)
-            } else if (person.house === 'Ravenclaw') {
-                ravenclaws.push(person)
-            }
-        })
-        gryfCharacters = gryffindors.map((ele, id) => <button key={id} onClick={(event) => handleClick(event, ele.wand)}>{ele.name}</button>)
-        slythCharacters = slytherins.map((ele, id) => <button key={id} onClick={(event) => handleClick(event, ele.wand)}>{ele.name}</button>)
-        ravCharacters = ravenclaws.map((ele, id) => <button key={id} onClick={(event) => handleClick(event, ele.wand)}>{ele.name}</button>)
-        huffCharacters = hufflepuffs.map((ele, id) => <button key={id} onClick={(event) => handleClick(event, ele.wand)}>{ele.name}</button>)
-        
-        
-        hogwartsCharacters = (
-            <div>
-                <h3>Gryffindors</h3>
-                {gryfCharacters}
-                <h3>Slytherin</h3>
-                {slythCharacters}
-                <h3>Ravenclaw</h3>
-                {ravCharacters}
-                <h3>Hufflepuff</h3>
-                {huffCharacters}
-            </div>
-        )
+        hogwartsCharacters = character.map((ele, id) => <button key={id} onClick={(event) => handleClick(event, ele.wand)}>{ele.name}</button>)
+        hogwartsCharacters = character.map((ele, id) => <button key={id} onClick={(event) => handleClick(event, ele.wand)}>{ele.name}</button>)
+        hogwartsCharacters = character.map((ele, id) => <button key={id} onClick={(event) => handleClick(event, ele.wand)}>{ele.name}</button>)
+        hogwartsCharacters = character.map((ele, id) => <button key={id} onClick={(event) => handleClick(event, ele.wand)}>{ele.name}</button>)
     }
     return (
         <div className='wandGeneratorBackground'>
