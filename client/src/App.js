@@ -72,9 +72,7 @@ class App extends React.Component {
         </nav>
         <div className="App">
           <Route exact path='/' render={ () => <LoginPage liftToken={this.liftToken} token={this.state.token} logout={this.logout} />}/>
-          <Route exact path='/map' component={Homepage}/>
-          <Route exact path='/houses' component={DiagonAlley}/>
-          <Route exact path='/wand' component={WandGenerator}/>
+          <Route exact path='/map' render={ () => <Homepage user={this.state.user} /> }/>
           <Route exact path='/houses' component={DiagonAlleyInt}/>
           <Route exact path='/diagonalley' render={() => <DiagonAlley user={this.state.user} /> } />
           <Route exact path='/wand' component={WandGeneratorInt}/>

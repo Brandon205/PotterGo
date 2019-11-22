@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import { Redirect } from 'react-router-dom';
 import map from './img/MapboxMap.png';
 import tree from './img/Tree.jpg';
@@ -6,6 +6,7 @@ import gum from './img/GumWall.jpg';
 import store from './img/Bookstore.jpg';
 import station from './img/station.jpg';
 import pub from './img/pub.jpg';
+import axios from 'axios';
 
 export default function Homepage(props) {
 

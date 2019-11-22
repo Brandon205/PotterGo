@@ -23,6 +23,10 @@ class Login extends React.Component {
       } else {
         localStorage.setItem('mernToken', res.data.token);
         this.props.liftToken(res.data);
+        console.log(this.state.email)
+          Axios.post('/auth/edit/initial', {email: this.state.email}).then(response => {
+            console.log(response)
+          })
       }
     }).catch(err => console.log(err)); // Rate limiter catch block
     this.setState({ redirect: <Redirect to="/map" /> })
