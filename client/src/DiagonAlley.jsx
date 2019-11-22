@@ -28,7 +28,7 @@ function DiagonAlley (props) {
     }
 
     function onClick (event) {
-        setyouFaileda('click to begin')
+        setyouFaileda('Click a line to begin')
     }
 
     var youFailed;
@@ -37,18 +37,18 @@ function DiagonAlley (props) {
         youFailed = youFaileda
         youFailedFinal = <h1>{youFailed}</h1>
     } else {
-        youFailed = 'click to begin'
+        youFailed = 'Click a line to begin'
         youFailedFinal = <h1>{youFailed}</h1>
     } 
     var wholePage;
-    var myText = <div><p className='backToChecklist'>Go Back To Checklist!</p></div>
+    var myText = <div><p className='backToChecklist'>Go Back To the Map!</p></div>
     if (count > 900) {
         axios.post('/auth/edit/diagon', {diagon: 'true', id: props.user._id}).then(response => {
         })
         wholePage = (
             <div className='containerTwo'>
                 <h1 className='titleDiagon'>YOU WIN, COME ON IN AND FIND A WAND</h1>
-                <h3 className='titleDiagon'>The Password is: Muggles</h3>
+                <h4 className='titleDiagon'>The Password is: Muggles</h4>
                 <Link to='/map'>{myText}</Link>
             </div>
         )
@@ -56,29 +56,30 @@ function DiagonAlley (props) {
         wholePage = (
         <div className='backgroundDiv'>
             <div>
-                <h1>Welcome to Diagona Alley</h1>
-                <h2>t1428 Post Alley, Seattle, WA 98101 </h2>
+                <h1>Welcome to Diagon Alley</h1>
+                <h2>1428 Post Alley, Seattle, WA 98101 </h2>
                 <h2>Start yer journey by unlocking Diagon Alley!</h2>
                 <h3>Trace the shape on the bricks to unlock Diagon Alley and get yer school supplies!</h3>
             </div>
             <div className='metaContainer'>
                 <div className='container'>
                     <div onMouseMove={onMouseMove} onMouseDown={onMouseDown} className='diagonDiv'>
-                    <div onMouseMove={onMouseMoveTwo} className='innerDiv'></div>
+                    <div onMouseMove={onMouseMoveTwo} className='innerDiv'>
+                        <div>{youFailedFinal}</div>
+                    </div>
                     </div>
                 </div>
             </div>
             <div>
-                {youFailedFinal}
-                <button onClick={onClick} className='tryAgain'>Restart</button>
+                <button onClick={onClick} className='submit'>Restart</button>
             </div>
         </div>
         )
     }
     return (
-        <>
+        <div className="wandGeneratorBackground">
             {wholePage}
-        </>
+        </div>
     )
 }
 

@@ -22,9 +22,9 @@ function DiagonAlleyInt() {
     if (isTrue !== 'theywin') {
         conditionalizeThatShit = (
             <div>
-                <p>The following requires entry to Diagon Alley... Please enter your proof!</p>
+                <h4>The following requires entry to Diagon Alley... Please enter your proof!</h4>
                 <form onSubmit={handleSubmit}>
-                    <input type="text" name='password' value={currPassword} onChange={handleChange}/><br />
+                    <input className="text-input" type="text" name='password' value={currPassword} onChange={handleChange}/><br />
                     <input type="submit" value="Submit" className='submit'/>
                 </form>
             </div>    
@@ -32,14 +32,15 @@ function DiagonAlleyInt() {
     } else {
         conditionalizeThatShit = (
             <div>
-                <h3>Congradulations! You may now go and get a wand from ollivanders. The instructions are simple: you must select your favorite character from the books and you will be rewarded with your wand of choice</h3>
-                <Link to='/ollivanders'>Continue</Link>
+                <h4>Congratulations! You may now go and get a wand from ollivanders.</h4>
+                <h4> The instructions are simple: you must select your favorite character from the books and you will be rewarded with your wand of choice</h4>
+                <Link className="submit" to='/ollivanders'>Continue</Link>
             </div>
         )    
     }
 
     return (
-        <div className='DiagonAlleyIntContainer'>
+        <div className='DiagonAlleyIntContainer black-back'>
             <h1>You are about to enter Ollivanders!</h1>
             <img src={tree} alt="" className='bubbleWallImage'/>
             <h3>Please navigate through to the next page when you dare!</h3>

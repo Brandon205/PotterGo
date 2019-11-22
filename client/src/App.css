@@ -45,6 +45,23 @@ form {
   text-align: center;
 }
 
+span {
+  font-weight: bolder;
+  font-size: 1.5em;
+}
+
+.trolley {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.trolley-container {
+  display: flex;
+  justify-content: center;
+}
+
 .black-back {
   background-color: black;
   color: white;
@@ -67,7 +84,19 @@ form {
   font-family: HarryPotter;
   width: 100px;
   padding: 10px;
-  margin-bottom: 10px;
+  margin: 10px 0 10px 0;
+  border: none;
+  background-color: #E2B822;
+  font-size: 20px;
+  color: white;
+  border-radius: 5px;
+}
+
+.submit-houses {
+  font-family: HarryPotter;
+  width: 100px;
+  padding: 10px;
+  margin: 0 10px 10px 0;
   border: none;
   background-color: #E2B822;
   font-size: 20px;
@@ -159,7 +188,6 @@ form {
 
 /* ***************************** DiagonAlley *************************** */
 
-
 .backgroundDiv {
   display: flex;
   flex-flow: column;
@@ -205,6 +233,9 @@ form {
 .innerDiv {
   height: 300px;
   width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 /* ***************************** DiagonAlley *************************** */
 .containerTwo {
@@ -231,11 +262,12 @@ form {
 
 /* ***************************** wandGenerator *************************** */
 .wandGeneratorBackground {
+  background-color: black;
+  color: white;
+  margin: 0;
+  padding-bottom: 20px;
+}
+
+#wand-fix {
   height: 100vh;
-  width: 100vw;
 }
-
-.wandGeneratorContainer {
-  margin: 5%;
-}
-

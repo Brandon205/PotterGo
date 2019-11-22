@@ -6,10 +6,8 @@ function DiagonAlleyInt() {
 
     const [currPassword, setCurrPassword] = useState('')
 
-
-
     return (
-        <div className='DiagonAlleyIntContainer'>
+        <div className='DiagonAlleyIntContainer black-back'>
             <h1>Welcome to Diagon Alley</h1>
             <img src={gum} alt="" className='bubbleWallImage'/>
             <h3>Please navigate through to the next page when you dare!</h3>
