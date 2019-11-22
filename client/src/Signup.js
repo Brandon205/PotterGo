@@ -1,6 +1,7 @@
 import React from 'react';
 import Axios from 'axios';
 import { Redirect } from 'react-router-dom';
+import Login from './Login';
 
 class Signup extends React.Component {
   state = { 
@@ -40,15 +41,16 @@ class Signup extends React.Component {
     }
 
     return ( 
-      <div className="App">
-        <h1>Signup:</h1>
+      <div className="black-back">
+        <h1>Sign in</h1>
         <form onSubmit={this.handleSubmit}>
           <input className="text-input" type="text" name="name" onChange={this.handleChange} value={this.state.name} placeholder="Name" /><br/>
           <input className="text-input" type="text" name="email" onChange={this.handleChange} value={this.state.email} placeholder="Email" /><br/>
           <input className="text-input" type="text" name="house" onChange={this.handleChange} value={this.state.house} placeholder="Gryffindor" /><br/>
           <input className="text-input" type="password" name="password" onChange={this.handleChange} value={this.state.password} placeholder="Password" /><br/>
-          <button className="submit">Signup</button>
+          <button className="submit">Let's go</button>
         </form>
+        <Login />
         {redirect}
       </div>
     );

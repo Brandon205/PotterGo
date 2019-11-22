@@ -1,8 +1,12 @@
+@font-face {
+  font-family: HarryPotter;
+  src: url(../../client/src/img/HARRYP__.TTF);
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  background-color: whitesmoke;
+  font-family: HarryPotter;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

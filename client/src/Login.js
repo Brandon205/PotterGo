@@ -41,12 +41,12 @@ class Login extends React.Component {
     }
 
     return ( 
-      <div className="App">
-        <h1>Login:</h1>
+      <div className="black-back">
+        <h1>Log in</h1>
         <form onSubmit={this.handleSubmit}>
           <input className="text-input" type="text" name="email" onChange={this.handleChange} value={this.state.email} placeholder="Email" /><br />
           <input className="text-input" type="password" name="password" onChange={this.handleChange} value={this.state.password} placeholder="Password" /><br />
-          <button className="submit">Login</button>
+          <button className="submit">Let's go</button>
         </form>
         {redirect}
       </div>
