@@ -13,6 +13,9 @@ import WandGenerator from './WandGenerator';
 import DiagonAlleyInt from './DiagonAlleyInt';
 import WandGeneratorInt from './WandGeneratorInt';
 import Trolley from './Trolley';
+import Bookstore from './Bookstore';
+import Station from './Station';
+import Pub from './Pub';
 
 class App extends React.Component {
   state = { 
@@ -64,8 +67,8 @@ class App extends React.Component {
       <Router>
         <nav>
           <Link className="link" to="/map"><i className="material-icons">home</i></Link>
-          <Link className="link" to="/trolley"><i className="material-icons secondary-content">arrow_forward</i></Link>
-          <Link className="link" to="/"><i className="material-icons secondary-content">arrow_forward</i></Link>
+          <Link className="link" to="/trolley"><i className="material-icons">list</i></Link>
+          <Link className="link" to="/"><i className="material-icons">perm_identity</i></Link>
         </nav>
         <div className="App">
           <Route exact path='/' render={ () => <LoginPage liftToken={this.liftToken} token={this.state.token} logout={this.logout} />}/>
@@ -75,6 +78,9 @@ class App extends React.Component {
           <Route exact path='/wand' component={WandGeneratorInt}/>
           <Route exact path='/ollivanders' render={() => <WandGenerator user={this.state.user} /> } />
           <Route exact path='/trolley' render={ () => <Trolley user={this.state.user} /> } />
+          <Route exact path='/bookstore' component={Bookstore} />
+          <Route exact path='/station' component={Station} />
+          <Route exact path='/pub' component={Pub} />
         </div>
       </Router>  
     );
