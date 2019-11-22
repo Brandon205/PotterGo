@@ -10,6 +10,8 @@ import DiagonAlley from './DiagonAlley';
 import Homepage from './Homepage';
 import LoginPage from './LoginPage';
 import WandGenerator from './WandGenerator';
+import DiagonAlleyInt from './DiagonAlleyInt';
+import WandGeneratorInt from './WandGeneratorInt';
 
 class App extends React.Component {
   state = { 
@@ -69,6 +71,15 @@ class App extends React.Component {
           <Route exact path='/map' component={Homepage}/>
           <Route exact path='/houses' component={DiagonAlley}/>
           <Route exact path='/wand' component={WandGenerator}/>
+          <Route exact path='/houses' component={DiagonAlleyInt}/>
+          <Route exact path='/diagonalley' render={() => <DiagonAlley user={this.state.user} /> } />
+          <Route exact path='/wand' component={WandGeneratorInt}/>
+          <Route exact path='/ollivanders' render={() => <WandGenerator user={this.state.user} /> } />
+          <nav>
+            <Link className="link" to="/map"><i className="material-icons">home</i></Link>
+            <Link className="link" to="/trolley"><i className="material-icons secondary-content">arrow_forward</i></Link>
+            <Link className="link" to="/trolley"><i className="material-icons secondary-content">arrow_forward</i></Link>
+          </nav>
         </div>
       </Router>  
     );
