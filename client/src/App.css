@@ -19,6 +19,7 @@ header {
 
 header h1 {
   margin: 0;
+  width: 100vw;
 }
 
 img {
@@ -69,8 +70,8 @@ form {
 
 .absoluteGum {
   position: absolute;
-  top: 20vh;
-  left: 44vw;
+  top: 24vh;
+  left: 37vw;
   width: 35px;
   height: 35px;
 }
