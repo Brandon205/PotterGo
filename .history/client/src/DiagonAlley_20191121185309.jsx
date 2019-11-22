@@ -43,9 +43,9 @@ function DiagonAlley (props) {
     } 
     var wholePage;
     var myText = <div><p className='backToChecklist'>Go Back To Checklist!</p></div>
-    if (count > 20) {
-        console.log(props.user)
-        axios.post('/auth/edit/diagon', {diagon: 'true', id: props.user._id}).then(response => {
+    if (count > 900) {
+        axios.post('/auth/edit/diagon', {diagon: 'true', id: user._id}).then(response => {
+
         })
         wholePage = (
             <div className='containerTwo'>

@@ -6,13 +6,6 @@ const User = require('../models/user');
 
 router.post('/edit/diagon', (req, res) => {
   User.findByIdAndUpdate(req.body.id, {diagon: req.body.diagon}, (err, user) =>{
-    console.log(user)
-    res.json('updated')
-  })})
-
-router.post('/edit/wand', (req, res) => {
-  User.findByIdAndUpdate(req.body.id, {wand: req.body.wand}, (err, user) =>{
-    console.log(user)
     res.json('updated')
   })})
 

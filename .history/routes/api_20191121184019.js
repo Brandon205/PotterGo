@@ -48,5 +48,7 @@ router.get('/wands', (req, res) => {
     })
 })
 
+// post to database
+
 
 module.exports = router;

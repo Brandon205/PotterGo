@@ -10,12 +10,6 @@ router.post('/edit/diagon', (req, res) => {
     res.json('updated')
   })})
 
-router.post('/edit/wand', (req, res) => {
-  User.findByIdAndUpdate(req.body.id, {wand: req.body.wand}, (err, user) =>{
-    console.log(user)
-    res.json('updated')
-  })})
-
 router.post('/signup', (req, res) => {
   // See if email is already in the db
   User.findOne({ email: req.body.email }, (err, user) => {

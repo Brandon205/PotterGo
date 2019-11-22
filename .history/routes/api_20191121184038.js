@@ -48,5 +48,10 @@ router.get('/wands', (req, res) => {
     })
 })
 
+// post to database
+router.post('/api/addDiagon', (req, res) =>{
+
+})
+
 
 module.exports = router;

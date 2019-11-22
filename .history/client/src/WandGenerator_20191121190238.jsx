@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 
-function WandGenerator (props) {
+function WandGenerator () {
 
     const [character, setCharacters] = useState([])
     const [singleChar, setSingleChar] = useState('')

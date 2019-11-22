@@ -2,7 +2,7 @@ import React, { useState} from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 
-function DiagonAlley (props) {
+function DiagonAlley () {
     const [X, setX] = useState(0)
     const [Y, setY] = useState(0)
     const [breaking, setBreaking] = useState(false)
@@ -43,9 +43,9 @@ function DiagonAlley (props) {
     } 
     var wholePage;
     var myText = <div><p className='backToChecklist'>Go Back To Checklist!</p></div>
-    if (count > 20) {
-        console.log(props.user)
-        axios.post('/auth/edit/diagon', {diagon: 'true', id: props.user._id}).then(response => {
+    if (count > 900) {
+        axios.post('/auth/edit/diagon', {diagon: 'true'}).then(response => {
+
         })
         wholePage = (
             <div className='containerTwo'>

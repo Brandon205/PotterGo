@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 
-function WandGenerator (props) {
+function WandGenerator () {
 
     const [character, setCharacters] = useState([])
     const [singleChar, setSingleChar] = useState('')
@@ -21,7 +21,7 @@ function WandGenerator (props) {
     var hogwartsCharacters;
     if (personPicked) {
         if (typeof singleChar !== 'undefined') {
-            axios.post('/auth/edit/wand', {wand: 'Elder, 15", Thestral tail hair core', id: props.user._id}).then(response => {
+            axios.post('/auth/edit/diagon', {wand: 'Elder, 15", Thestral tail hair core', id: props.user._id}).then(response => {
             })
             hogwartsCharacters = 'Your wand is: ' + singleChar
         } else {

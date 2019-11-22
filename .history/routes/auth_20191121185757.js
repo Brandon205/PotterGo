@@ -11,7 +11,7 @@ router.post('/edit/diagon', (req, res) => {
   })})
 
 router.post('/edit/wand', (req, res) => {
-  User.findByIdAndUpdate(req.body.id, {wand: req.body.wand}, (err, user) =>{
+  User.findByIdAndUpdate(req.body.id, {diagon: req.body.diagon}, (err, user) =>{
     console.log(user)
     res.json('updated')
   })})
