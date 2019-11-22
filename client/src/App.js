@@ -61,9 +61,16 @@ class App extends React.Component {
   render() { 
     return ( 
       <Router>
+        <nav>
+          <Link className="link" to="/map"><i className="material-icons">home</i></Link>
+          <Link className="link" to="/trolley"><i className="material-icons secondary-content">arrow_forward</i></Link>
+          <Link className="link" to="/"><i className="material-icons secondary-content">arrow_forward</i></Link>
+        </nav>
         <div className="App">
-          <Route exact path='/' render={ () => <LoginPage liftToken={this.liftToken}/>}/>
+          <Route exact path='/' render={ () => <LoginPage liftToken={this.liftToken} token={this.state.token} logout={this.logout} />}/>
           <Route exact path='/map' component={Homepage}/>
+          <Route exact path='/houses' component={DiagonAlley}/>
+          <Route exact path='/wand' component={WandGenerator}/>
           <Route exact path='/houses' component={DiagonAlleyInt}/>
           <Route exact path='/diagonalley' render={() => <DiagonAlley user={this.state.user} /> } />
           <Route exact path='/wand' component={WandGeneratorInt}/>
