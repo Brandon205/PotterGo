@@ -50,7 +50,6 @@ header h1 {
   height: 100vh;
   width: 100vw;
   background-image: url('brick.jpg');
-  background-size: cover;
 }
 
 .container {
@@ -81,12 +80,12 @@ header h1 {
 
 .titleDiagon {
   font-size: 2em;
-  color: white;
+  color: darkgrey;
 }
 
 .backToChecklist {
   text-decoration: none;
-  color: white;
+  color: rgb(73, 65, 65);
   font-size: 3em;
   border-radius: 20%;
 }

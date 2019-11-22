@@ -50,7 +50,6 @@ header h1 {
   height: 100vh;
   width: 100vw;
   background-image: url('brick.jpg');
-  background-size: cover;
 }
 
 .container {
@@ -64,7 +63,7 @@ header h1 {
   flex-flow: column;
   height: 100vh;
   width: 100vw;
-  background-image: url('diagonAlley.jpg');
+  background-image: url('diagon.jpg');
   background-size: cover;
 }
 
@@ -81,13 +80,18 @@ header h1 {
 
 .titleDiagon {
   font-size: 2em;
+  background: grey;
   color: white;
+  width: ;
 }
 
 .backToChecklist {
   text-decoration: none;
   color: white;
   font-size: 3em;
+  background: grey;
+  width: 30vw;
+  height: 20vh;
   border-radius: 20%;
 }
 
